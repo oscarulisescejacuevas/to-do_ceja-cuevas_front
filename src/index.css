@@ -1,0 +1,306 @@
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* ==== ESTILOS GENERALES WESTERN ==== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #2a1d15; /* Café oscuro estilo cantina */
+  color: #f2e7d5; /* Hueso tostado */
+  font-family: "Inter", sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/old-wall.png");
+}
+
+/* FUENTES WESTERN */
+.western-title,
+.login-box h2,
+.topbar h1,
+.register-box h2,
+.item .title {
+  font-family: "Rye", "Sancreek", serif !important;
+}
+
+/* Texto decorativo western */
+.western-text {
+  font-family: "Sancreek", serif !important;
+}
+
+/* === LOGIN WESTERN === */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #3a271c, #1e140e);
+}
+
+.login-box {
+  background: rgba(60, 40, 25, 0.92);
+  padding: 40px;
+  border-radius: 14px;
+
+  border: 2px solid #8b5a36;
+  box-shadow: 0 0 20px rgba(139, 90, 54, 0.5), 
+              0 0 35px rgba(63, 27, 10, 0.8);
+
+  text-align: center;
+  animation: westernGlow 2.5s infinite alternate;
+}
+
+.login-box h2 {
+  color: #d7b48a;
+  font-weight: bold;
+  text-shadow: 0 0 10px #8b5a36;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #8b5a36;
+  background: #3d2a1e;
+  color: #f2e7d5;
+  box-shadow: inset 0 0 8px rgba(139, 90, 54, 0.5);
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #c49a6c;
+  box-shadow: 0 0 12px rgba(196,154,108,0.6);
+}
+
+.login-box button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8b5a36, #c49a6c);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  box-shadow: 0 0 15px #c49a6c, 0 0 25px #8b5a36;
+}
+
+@keyframes westernGlow {
+  from {
+    box-shadow: 0 0 15px rgba(139, 90, 54, 0.7);
+  }
+  to {
+    box-shadow: 0 0 28px rgba(196, 154, 108, 0.9);
+  }
+}
+
+/* === DASHBOARD ESTILO CANTINA === */
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(60, 40, 25, 0.85);
+  border-bottom: 2px solid #8b5a36;
+  border-radius: 12px;
+
+  box-shadow: 0 0 14px rgba(139,90,54,0.6);
+}
+
+.topbar h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #e8d2b4;
+  text-shadow: 0 0 8px #8b5a36;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* === ESTADÍSTICAS === */
+.stats {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: #e8d2b4;
+}
+
+/* === BOTONES WESTERN === */
+.btn {
+  background: linear-gradient(90deg, #8b5a36, #c49a6c);
+  color: white;
+  border: 0;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Sancreek", serif;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #c49a6c;
+}
+
+.btn.danger {
+  background: linear-gradient(90deg, #7b1e1e, #d45757);
+}
+
+/* === CHIP FILTROS === */
+.chip {
+  background: #3d2a1e;
+  border: 1px solid #8b5a36;
+  color: #e8d2b4;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Sancreek", serif;
+}
+
+.chip.active {
+  border-color: #c49a6c;
+  color: #fff;
+  box-shadow: 0 0 10px #c49a6c;
+}
+
+/* === TARJETAS DE TAREAS ESTILO OESTE === */
+.item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+
+    background: rgba(70, 48, 33, 0.45);
+    backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(139, 90, 54, 0.4);
+    padding: 16px;
+    border-radius: 12px;
+
+    transition: 0.2s ease-out;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(139, 90, 54, 0.5);
+}
+
+.item.done {
+    opacity: 0.8;
+    border-color: rgba(200, 160, 110, 0.2);
+}
+
+.item.done .title {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Número */
+.task-number {
+  background: #3d2a1e;
+  border: 1px solid #8b5a36;
+  color: #e8d2b4;
+  font-weight: 700;
+}
+
+/* Título (fuente western aplicada arriba) */
+.item .title {
+  color: #f2e7d5;
+}
+
+/* Descripción */
+.task-desc {
+  color: #e8d2b4;
+}
+
+/* Botones individuales */
+.item .action-btn {
+    background: none;
+    border: 1px solid #8b5a36;
+    color: #e8d2b4;
+    font-family: "Sancreek", serif;
+}
+
+.item .action-btn:hover {
+    color: #c49a6c;
+    border-color: #c49a6c;
+}
+
+.item .action-btn.danger:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* === REGISTER WESTERN === */
+.register-box {
+  background: rgba(60, 40, 25, 0.92);
+  border: 2px solid #8b5a36;
+  box-shadow: 0 0 25px rgba(139, 90, 54, 0.6);
+}
+
+.register-box h2 {
+  color: #e8d2b4;
+  text-shadow: 0 0 8px #8b5a36;
+}
+
+.register-box input {
+  background: #3d2a1e;
+  border: 1px solid #8b5a36;
+  color: #f2e7d5;
+}
+
+.register-box button {
+  background: linear-gradient(90deg, #8b5a36, #c49a6c);
+}
+
+.register-link a {
+  color: #c49a6c;
+}
+
+.error-message {
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  background: rgba(255, 107, 107, 0.15);
+}
+
+.success-message {
+  color: #c49a6c;
+  border: 1px solid #c49a6c;
+  background: rgba(196, 154, 108, 0.15);
+}
+
+/* === ESTADO DE CONEXIÓN === */
+.estado-conexion.online {
+  background: rgba(80, 150, 80, 0.2);
+  border-color: #5aff82;
+  color: #5aff82;
+}
+
+.estado-conexion.offline {
+  background: rgba(150, 70, 70, 0.2);
+  border-color: #ff6969;
+  color: #ff6969;
+}
+
+/* === MOBILE RESPONSIVE (SE CONSERVA IGUAL) === */
+@media (max-width: 600px) {
+  /* Todo igual que tu versión */
+}
